@@ -1,9 +1,18 @@
 import React, {Component, Fragment} from 'react';
-import {Link, Route} from "react-router-dom";
-import data from '../mockups/data'
-import Product from './Product'
+import {Link} from "react-router-dom";
+import data from '../mockups/data';
 
 class Products extends Component {
+
+  state = {
+    products:{}
+  }
+  componentDidMount() {
+    this.setState({
+      products:data,
+    })
+  }
+
   render() {
     return (
       <Fragment>
